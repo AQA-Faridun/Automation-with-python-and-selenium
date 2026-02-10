@@ -21,6 +21,7 @@ def browser(request):
     )
 
     chrome = webdriver.Chrome(options=options)
+    chrome.implicitly_wait(10)
     yield chrome
 
     chrome.quit()
